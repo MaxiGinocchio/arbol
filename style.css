@@ -30,38 +30,39 @@ body {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
-  height: 250px;
+  width: 80px;
+  height: 320px;
   background: #a97453;
-  border-radius: 25px;
+  border-radius: 30px;
 }
 
 .branches {
   position: absolute;
-  bottom: 220px;
+  bottom: 270px;
   left: 50%;
-  width: 260px;
-  height: 160px;
+  width: 380px;
+  height: 230px;
   background: #c8a383;
-  border-radius: 130px 130px 90px 90px;
+  border-radius: 190px 190px 120px 120px;
   transform: translateX(-50%);
-  box-shadow: 0 0 12px #dcbca1;
+  box-shadow: 0 0 14px #dcbca1;
 }
 
 #leaves {
   position: absolute;
-  bottom: 220px;
+  bottom: 270px;
   left: 50%;
-  width: 260px;
-  height: 160px;
+  width: 380px;
+  height: 230px;
   transform: translateX(-50%);
-  overflow: visible;
+  overflow: hidden;
+  border-radius: 190px 190px 120px 120px;
 }
 
 .heart {
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 26px;
+  height: 26px;
   background: red;
   transform: scale(0);
   opacity: 0;
@@ -79,88 +80,24 @@ body {
 
 #leftText {
   position: fixed;
-  top: 20%;
-  left: 5%;
-  max-width: 300px;
-  font-size: 18px;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 32px;
+  text-align: center;
   word-wrap: break-word;
+  max-width: 95vw;
 }
 
 #letterText {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 #counter {
-  font-size: 16px;
+  font-size: 28px;
   color: #d86f61;
-  margin-top: 20px;
+  margin-top: 35px;
   opacity: 0;
-  transform: translateY(10px);
-  animation: fadeSlide 1s ease forwards;
+  transition: opacity 2s ease;
   white-space: nowrap;
-}
-
-@keyframes fadeSlide {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-#startButton {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 14px 24px;
-  font-size: 20px;
-  background: #d86f61;
-  color: #fdf6ec;
-  border: none;
-  border-radius: 14px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background 0.3s;
-  z-index: 10;
-}
-
-#startButton:hover {
-  background: #c05648;
-}
-
-@media (max-width: 600px) {
-  #leftText {
-    top: 10%;
-    left: 5%;
-    max-width: 90%;
-    font-size: 16px;
-  }
-
-  #startButton {
-    font-size: 18px;
-    padding: 12px 20px;
-  }
-}
-#counter {
-  font-size: 16px;
-  color: #d86f61;
-  margin-top: 20px;
-  opacity: 0;
-  transform: translateY(10px);
-  white-space: nowrap;
-}
-
-.showCounter {
-  animation: fadeSlide 1s ease forwards;
-}
-
-@keyframes fadeSlide {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
